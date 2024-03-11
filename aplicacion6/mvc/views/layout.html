@@ -1,0 +1,36 @@
+$def with (content)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-dark">
+  <header class="bg-secondary py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <a href="#" class="navbar-brand text-white">Productos</a>
+        </div>
+        <div class="col-auto">
+          <a href="/insertar" class="btn btn-success">Insertar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <hr class="border-light">
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        $:content
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (opcional) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

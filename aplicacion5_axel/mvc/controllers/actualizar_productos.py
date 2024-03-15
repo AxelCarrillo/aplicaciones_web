@@ -1,4 +1,3 @@
-
 import web
 import base64
 from ..models.modelo_productos import ModeloProductos

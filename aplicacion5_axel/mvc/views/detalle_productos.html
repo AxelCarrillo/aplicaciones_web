@@ -70,6 +70,7 @@ $def with (producto)
                 $for dato in producto:
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
+                        <center>
                         <div class="d-flex align-items-start">
                             <div>
                                 <img src="data:image/$dato['extension'];base64, $dato['imagen']" alt=""
@@ -80,6 +81,7 @@ $def with (producto)
                                 <p class="mb-0">$dato['nombre']</p>
                             </div>
                         </div>
+                        </center>
                     </li>
                     <li class="list-group-item">
                         <p class="fw-bold mb-0">Descripción:</p>

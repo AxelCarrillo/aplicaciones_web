@@ -9,7 +9,7 @@ $def with(productos)
                 <input type="text" id="nombre" name="nombre" class="form-control" required>
             </div>
             <div class="col-auto">
-                <button type="submit" class="btn btn-info">Buscar</button>
+                <button type="submit" class="btn btn-outline-success">Buscar</button>
             </div>
           </div>
     </form>
@@ -49,8 +49,8 @@ $def with(productos)
                     $campo['existencias']
                 </td>
                 <td class="px-6 py-4">
-                    <a href="/detalle/$campo['id_productos']" class="btn btn-warning">Detalles</a>
-                    <a href="/actualizar/$campo['id_productos']" class="btn btn-success">Actualizar</a>
+                    <a href="/detalle/$campo['id_productos']" class="btn btn-info">Detalles</a>
+                    <a href="/actualizar/$campo['id_productos']" class="btn btn-light">Actualizar</a>
                     <a href="/borrar/$campo['id_productos']" class="btn btn-danger">Borrar</a>
                 </td>
             </tr>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertar Producto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 500;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            border-radius: 20px; /* Borde redondeado */
+            text-align: center; /* Centra el texto */
+            width: 70%; /* Ancho del botón */
+            padding: 10px 0; /* Padding vertical */
+            cursor: pointer; /* Cursor apuntador */
+            border: none; /* Quita el borde */
+            transition: background-color 0.3s, color 0.3s; /* Transición suave */
+        }
+
+        .btn:hover {
+            opacity: 0.8; /* Opacidad al pasar el mouse */
+            color: #000; /* Cambia el color del texto a negro */
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">Insertar Producto</h2>
+        <form method="POST" enctype="multipart/form-data" action="">
+            <label for="nombre_producto">Producto</label>
+            <input type="text" name="nombre_producto" id="nombre_producto" placeholder="Tu producto" required>
+
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" name="descripcion" rows="3" placeholder="Escribe una descripción del producto"
+                required></textarea>
+
+            <label for="precio">Precio</label>
+            <input type="number" name="precio" id="precio" placeholder="Precio del producto" required>
+
+            <label for="existencia">Existencia</label>
+            <input type="number" name="existencia" id="existencia" placeholder="Cantidad disponible" required>
+
+            <label for="imagen">Imagen</label>
+            <input id="imagen" name="imagen" type="file" accept="image/*" required>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Ingresar</button>
+                <a href="/" class="btn btn-danger">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -20,12 +20,17 @@ $def with(productos)
 
         /* Redefinición de estilos para los botones */
         .btn-orange {
-            background-color: #279c83; /* Naranja */
+            background-color: #ffc420; /* Naranja */
         }
 
         .btn-blue {
             background-color: #007bff; /* Azul */
         }
+
+        .btn-white {
+        background-color: #ffffff; /* Fondo blanco */
+        color: black; /* Cambiar el color del texto a rojo */
+        }  
 
         .btn-green {
             background-color: #28a745; /* Verde */
@@ -36,7 +41,7 @@ $def with(productos)
         }
 
         .btn {
-            color: #fff; /* Texto blanco */
+            margin-top: 8px; /* Margen superior para separar */
             border-radius: 20px; /* Borde redondeado */
             transition: background-color 0.3s; /* Transición suave */
             text-align: center; /* Centra el texto */
@@ -78,7 +83,7 @@ $def with(productos)
                 <label for="nombre">Nombre</label>
             </div>
             <div class="col s12 m4">
-                <button type="submit" class="waves-effect waves-light btn btn-blue">Buscar</button>
+                <button type="submit" class="waves-effect waves-light btn btn-white">Buscar</button>
             </div>
         </div>
     </form>

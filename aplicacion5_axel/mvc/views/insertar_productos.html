@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +26,9 @@
             font-weight: 600;
             color: #333;
             margin-bottom: 20px;
+            background-color: #fd7e14;
+            padding: 10px 20px;
+            border-radius: 8px 8px 0 0;
         }
 
         label {
@@ -47,22 +50,32 @@
         }
 
         .btn {
-            border-radius: 20px; /* Borde redondeado */
-            text-align: center; /* Centra el texto */
-            width: 70%; /* Ancho del botón */
-            padding: 10px 0; /* Padding vertical */
-            cursor: pointer; /* Cursor apuntador */
-            border: none; /* Quita el borde */
-            transition: background-color 0.3s, color 0.3s; /* Transición suave */
+            border-radius: 20px;
+            text-align: center;
+            width: 70%;
+            padding: 10px 0;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .btn:hover {
-            opacity: 0.8; /* Opacidad al pasar el mouse */
-            color: #000; /* Cambia el color del texto a negro */
+            opacity: 0.8;
+            color: #000;
         }
 
         .text-center {
             text-align: center;
+        }
+
+        .btn-success {
+            background-color: #fd7e14;
+            color: #fff;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: #fff;
         }
     </style>
 </head>
@@ -88,7 +101,7 @@
             <input id="imagen" name="imagen" type="file" accept="image/*" required>
 
             <div class="text-center">
-                <button type="submit" class="btn btn-success">Ingresar</button>
+                <button type="submit" class="btn btn-success">Insertar</button>
                 <a href="/" class="btn btn-danger">Cancelar</a>
             </div>
         </form>

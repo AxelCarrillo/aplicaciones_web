@@ -1,4 +1,5 @@
-$def with(productos)
+$def with (productos, page, total_paginas)
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,17 +24,13 @@ $def with(productos)
             background-color: #ffc420; /* Naranja */
         }
 
-        .btn-oranges {
-            background-color: #734eb2; /* Naranja */
-        }
-
         .btn-blue {
             background-color: #007bff; /* Azul */
         }
 
         .btn-white {
-        background-color: #ffffff; /* Fondo blanco */
-        color: black; /* Cambiar el color del texto a rojo */
+            background-color: #ffffff; /* Fondo blanco */
+            color: black; /* Cambiar el color del texto a negro */
         }  
 
         .btn-green {
@@ -82,9 +79,6 @@ $def with(productos)
             <div class="col s12 m4">
                 <a href="/insertar" class="waves-effect waves-light btn btn-orange">Insertar</a>
             </div>
-            <div class="col s12 m4">
-                <a href="/" class="waves-effect waves-light btn btn-oranges">Inicio</a>
-            </div>
             <div class="input-field col s12 m4">
                 <input type="text" id="nombre" name="nombre" class="validate" placeholder="Busca un producto" required>
                 <label for="nombre">Nombre</label>
@@ -107,21 +101,21 @@ $def with(productos)
             </tr>
             </thead>
             <tbody>
-            $for campo in productos:
+            {% for producto in productos %}
             <tr>
-                <td class="divider"><a href="/detalle/$campo['id_productos']" class="waves-effect waves-light btn btn-blue">$campo['nombre']</a></td>
-                <td class="divider">$campo['descripción']</td>
-                <td class="divider">$campo['precio']</td>
-                <td class="divider">$campo['existencias']</td>
-                <td class="divider"><img src="data:image/$campo['extension'];base64, $campo['imagen']" alt="" class="small-image"></td>
+                <td class="divider">{{ producto[1] }}</td>
+                <td class="divider">{{ producto[2] }}</td>
+                <td class="divider">{{ producto[3] }}</td>
+                <td class="divider">{{ producto[4] }}</td>
+                <td class="divider"><img src="data:image/{{ producto[6] }};base64, {{ producto[5] }}" alt="" class="small-image"></td>
                 <td>
                     <div class="divider"></div> <!-- Línea divisoria -->
-                    <a href="/actualizar/$campo['id_productos']" class="waves-effect waves-light btn btn-green">Actualizar</a>
-                    <a href="/borrar/$campo['id_productos']" class="waves-effect waves-light btn btn-red">Borrar</a>
+                    <a href="/actualizar/{{ producto[0] }}" class="waves-effect waves-light btn btn-green">Actualizar</a>
+                    <a href="/borrar/{{ producto[0] }}" class="waves-effect waves-light btn btn-red">Borrar</a>
                     <div class="divider"></div> <!-- Línea divisoria -->
-
                 </td>
             </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>

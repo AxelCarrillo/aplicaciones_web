@@ -83,7 +83,7 @@ $def with (producto)
 
 <body>
     <div class="container py-5">
-        <form class="p-6" method="POST" action="" enctype="multipart/form-data">
+        <form class="p-6" method="POST" action="" enctype="multipart/form-data" onsubmit="return validateForm();">
             <div class="container max-w-screen-lg mx-auto">
                 <h2 class="font-semibold text-xl text-gray-600">Actualizar Producto</h2>
                 $for dato in producto:
@@ -121,6 +121,21 @@ $def with (producto)
             </div>
         </form>
     </div>
+
+    <script>
+        function validateForm() {
+            var precio = parseFloat(document.getElementById('precio').value);
+            var existencia = parseFloat(document.getElementById('existencia').value);
+
+            if (precio <= 0 || existencia <= 0 || isNaN(precio) || isNaN(existencia)) {
+                alert("El precio y la existencia deben ser números mayores que 0.");
+                document.querySelector('.alert').style.color = 'red'; // Cambiar el color del texto a rojo
+                return false;
+            }
+
+            return true; // Devolver true para permitir el envío del formulario si los valores son válidos
+        }
+    </script>
 </body>
 
 </html>
